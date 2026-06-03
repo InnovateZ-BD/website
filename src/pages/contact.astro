@@ -187,7 +187,8 @@ const keywords = "contact us, get in touch, inquiry, project consultation, digit
         >
           Send us a message
         </h2>
-        <form class="space-y-5 w-full relative">
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-5 w-full relative">
+          <input type="hidden" name="access_key" value="a452c923-769e-40ec-b4ea-b5f7d87c1b76" />
           <div class="space-y-2 input-glow transition-all duration-300">
             <label
               class="font-label-sm text-label-sm text-on-surface-variant block"
@@ -198,6 +199,8 @@ const keywords = "contact us, get in touch, inquiry, project consultation, digit
               id="name"
               placeholder="Enter your full name"
               type="text"
+              name="name"
+              required
             />
           </div>
           <div class="space-y-2 input-glow transition-all duration-300">
@@ -210,6 +213,8 @@ const keywords = "contact us, get in touch, inquiry, project consultation, digit
               id="email"
               placeholder="system@domain.com"
               type="email"
+              name="email"
+              required
             />
           </div>
           <div class="space-y-2 input-glow transition-all duration-300">
@@ -220,6 +225,7 @@ const keywords = "contact us, get in touch, inquiry, project consultation, digit
             <select
               class="w-full bg-surface-dim border border-[#27272A] focus:border-primary rounded px-4 py-3 text-on-surface font-body-md outline-none transition-colors appearance-none"
               id="project"
+              name="project"
             >
               <option>SaaS Architecture</option>
               <option>Enterprise Integration</option>
@@ -236,7 +242,9 @@ const keywords = "contact us, get in touch, inquiry, project consultation, digit
               class="w-full bg-surface-dim border border-[#27272A] focus:border-primary rounded px-4 py-3 text-on-surface font-body-md placeholder-secondary-fixed-dim/50 outline-none transition-colors resize-none"
               id="message"
               placeholder="Detail your requirements..."
-              rows="3"></textarea>
+              rows="3"
+              name="message"
+              required></textarea>
           </div>
           <button
             class="w-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-on-primary font-label-sm text-label-sm font-bold py-3 rounded DEFAULT transition-all duration-300 flex items-center justify-center space-x-2 mt-4"
